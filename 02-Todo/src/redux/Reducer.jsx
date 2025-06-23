@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, UPDATE_STATUS } from "./Action";
+import { ADD_TODO, DELETE_TODO,HANDLE_EDIT,SET_EDIT_TEXT,TOGGLE_EDIT_MODE,UPDATE_STATUS } from "./Action";
 
 export const reducerTodo = (store=[], action ) => {
     switch(action.type)
@@ -19,6 +19,28 @@ export const reducerTodo = (store=[], action ) => {
         case DELETE_TODO : 
                             store = store.filter((ele)=> ele.id != action.payload.id)
                             break;
+                            
+ case TOGGLE_EDIT_MODE:
+      return store.map((ele) =>
+        ele.id === action.payload.id
+          ? { ...ele, isEditing: !ele.isEditing, editText: ele.text }
+          : ele
+      );
+
+    case SET_EDIT_TEXT:
+      return store.map((ele) =>
+        ele.id === action.payload.id
+          ? { ...ele, editText: action.payload.text }
+          : ele
+      );
+
+    case HANDLE_EDIT:
+      return store.map((ele) =>
+        ele.id === action.payload.id
+          ? { ...ele, text: ele.editText, isEditing: false, editText: "" }
+          : ele
+      );
+
         default : 
                 store;
     }
