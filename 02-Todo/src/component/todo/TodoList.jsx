@@ -60,7 +60,7 @@ const TodoList = () => {
                 <table className="table-auto">
                     <thead>
                         <tr>
-                            <th className='px-10 py-3 border bg-gray-300'>Id</th>
+                            <th className='px-10 py-3 border bg-gray-300' >Id</th>
                             <th className='px-10 py-3 border bg-gray-300'>Todo</th>
                             <th className='px-10 py-3 border bg-gray-300'>Status</th>
                             <th className='px-10 py-3 border bg-gray-300'>Edit</th>

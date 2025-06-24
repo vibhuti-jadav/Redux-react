@@ -18,10 +18,10 @@ const Product = () => {
             <div class="px-6 pt-4 pb-2 flex">
                 { categories.map((cat)=>(
                     <button onClick={ () =>dispatch(filterCategories(cat.slug))} class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{cat.name}</button>
-                ))}
+                ))} 
             </div>
             </div>
-             
+
             <div className="grid grid-cols-4 gap-3">
                 {
                     products.map((ele) => (
@@ -42,6 +42,7 @@ const Product = () => {
                     ))
                 }
             </div>
+
             <div className="flex my-4 w-fit mx-auto">
                 <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
                     Prev

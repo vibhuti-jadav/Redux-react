@@ -5,10 +5,6 @@ import { useDispatch, useSelector } from "react-redux"
 import Product from "./component/product/Product"
 
 
-
-
-
-
 function App() {
 
   const skip = useSelector((state)=> state.products.page.skip)

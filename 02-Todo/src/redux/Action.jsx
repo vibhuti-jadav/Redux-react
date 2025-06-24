@@ -7,7 +7,6 @@ export const TOGGLE_EDIT_MODE = "TOGGLE_EDIT_MODE";
 export const SET_EDIT_TEXT = "SET_EDIT_TEXT";
 
 
-
 export function handleAdd(to){
     return {
         type:ADD_TODO,
