@@ -14,13 +14,13 @@ const Product = () => {
 
     return (
         <div className='max-w-7xl mx-auto'>
-            <div className="overflow-x-auto">
+          <div className="overflow-x-auto">
             <div class="px-6 pt-4 pb-2 flex">
                 { categories.map((cat)=>(
                     <button onClick={ () =>dispatch(filterCategories(cat.slug))} class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{cat.name}</button>
                 ))} 
             </div>
-            </div>
+           </div>
 
             <div className="grid grid-cols-4 gap-3">
                 {
@@ -39,6 +39,7 @@ const Product = () => {
                                 </button>
                             </div>
                         </div>
+                        
                     ))
                 }
             </div>
